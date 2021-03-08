@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import django_heroku
 
 from configparser import ConfigParser
 
@@ -152,3 +153,5 @@ print('Email host:port = {host}:{port}, user={user}'.format(
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'userdata')
 MEDIA_URL = '/userdata/'
+
+django_heroku.settings(locals())
