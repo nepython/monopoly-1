@@ -1,5 +1,4 @@
-from land import *
-
+from .land import *
 
 class Board(object):
 

@@ -142,11 +142,11 @@ STATIC_URL = '/static/'
 config = ConfigParser()
 config.read(os.path.join(BASE_DIR, 'config.ini'))
 
-EMAIL_HOST = config.get('Email', 'Host')
-EMAIL_PORT = int(config.get('Email', 'Port'))
-EMAIL_HOST_USER = config.get('Email', 'User')
-EMAIL_HOST_PASSWORD = config.get('Email', 'Password')
-EMAIL_USE_SSL = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'ccbitspilani2021@gmail.com'
+EMAIL_HOST_PASSWORD = 'bakchodclub@777'
+EMAIL_USE_TLS = True
 
 print('Email host:port = {host}:{port}, user={user}'.format(
     host=EMAIL_HOST, port=EMAIL_PORT, user=EMAIL_HOST_USER))
