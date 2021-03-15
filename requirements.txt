@@ -1,3 +1,4 @@
+pip==21.0.1
 asgiref==1.1.2
 attrs==20.3.0
 autobahn==21.2.1
@@ -6,7 +7,7 @@ cffi==1.14.5
 channels==1.1.8
 configparser==3.5.0
 constantly==15.1.0
-cryptography==3.4.6
+cryptography==3.3.1
 daphne==1.4.2
 dj-database-url==0.5.0
 Django==1.11.17
@@ -14,7 +15,9 @@ django-heroku==0.3.1
 hyperlink==21.0.0
 idna==3.1
 incremental==21.3.0
-psycopg2==2.8.6
+# NOTE: Both packages below are one and the same with the second one
+# being preferred as it standalone and doesn't require any external library
+# psycopg2==2.8.6
 psycopg2-binary==2.8.6
 pycparser==2.20
 pytz==2021.1
@@ -23,3 +26,4 @@ Twisted==21.2.0
 txaio==21.2.1
 whitenoise==5.2.0
 zope.interface==5.2.0
+social-auth-app-django==4.0.0
