@@ -26,12 +26,10 @@ jobs:
       with:
         platform: python
         platform-version: '3.6'
-      env:
-        CRYPTOGRAPHY_DONT_BUILD_RUST: 1
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'monopoly-apogee'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ae1a0f661bef4703ab59340412eccb92 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_bc8a3976af994d019a446fe4bebd2b92 }}
