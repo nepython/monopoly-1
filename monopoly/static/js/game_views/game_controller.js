@@ -15,6 +15,11 @@ class GameController {
         });
 
         this.boardController.drawBoard(onBoardPainted);
+        const onMouseMove = event => {
+            this.boardController.mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+            this.boardController.mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+        }
+        window.addEventListener("click", onMouseMove, false)
     }
 
     addPlayer(count, initPos) {
@@ -33,8 +38,46 @@ class GameController {
             this.boardController.addProperty(type, tileId);
         }
     }
+    removeProperty(type, tileId, playerIndex) {
+        
+            this.boardController.removeLandMark(playerIndex, tileId);
+       
+    }
 
     resizeBoard() {
         this.boardController.resize();
     }
 }
+
+
+// export const addObjectClickListener = (
+//     camera,
+//     scene,
+//     raycaster,
+//     objectToWatch,
+//     onMouseClick,
+//   ) => {
+//     const objectToWatchId = objectToWatch.uuid;
+//     let mouse = new THREE.Vector2();
+
+//     document.addEventListener(
+//       "click",
+//       (event) => {
+//         mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+//         mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+//         raycaster.setFromCamera(mouse, camera);
+
+//         const intersects = raycaster.intersectObjects(scene.children);
+
+//         const isIntersected = intersects.find(
+//           (intersectedEl) => intersectedEl.object.uuid === objectToWatchId
+//         );
+
+//         if (isIntersected) {
+//           onMouseClick();
+//         }
+//       },
+//       false
+//     );
+//   };

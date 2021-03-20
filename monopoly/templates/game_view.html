@@ -54,7 +54,14 @@
             <input id="chat-message-input" title="Message" placeholder="Press Enter to send message...">
         </div>
     </div>
-
+    <div id="tile-pop-info">
+    <div class="modal-popup" id="modal-popupbox-id">
+        <div class="modal-popup-box" id="modal-popup-box">
+            <button class="close-button">X</button>
+            <div class='place-data'></div>
+        </div>
+    </div>
+    </div>
     <div id="modal-card" class="card center-card hidden modal-hidden">
         <div class="card-blur-container">
             <div class="card-blur"></div>
@@ -66,6 +73,42 @@
             <div id="modal-message-container"></div>
             <div id="modal-buttons-container"></div>
         </div>
+        <div id="trade">
+            <table style="border-spacing: 3px">
+                <tr>
+                    <td class="trade-cell">
+                        <div id="trade-leftp-name"></div>
+                    </td>
+                    <td class="trade-cell">
+                        <div id="trade-rightp-name">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="trade-cell">
+                        <input id="trade-leftp-money" value= "0" placeholder="Enter amount to send with the other player." />
+                    </td>
+                    <td class="trade-cell">
+                        <input id="trade-rightp-money" value = "0" placeholder="Enter amount to recieve with the other player." />
+                    </td>
+                </tr>
+                <tr>
+                    <td id="trade-leftp-property" class="trade-cell"></td>
+                    <td id="trade-rightp-property" class="trade-cell"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="trade-cell">
+                        <input type="button" id="proposetradebutton" value="Propose Trade" title="Exchange the money and properties that are checked above." />
+                        <input type="button" id="canceltradebutton" value="Cancel Trade"  title="Cancel the trade." />
+                        <input type="button" id="accepttradebutton" value="Accept Trade" title="Accept the proposed trade." />
+                        <input type="button" id="rejecttradebutton" value="Reject Trade"  title="Reject the proposed trade." />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
     </div>
 
     <div id="dice-message" class="hidden">
