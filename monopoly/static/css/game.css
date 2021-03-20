@@ -99,8 +99,14 @@
 
 #modal-card {
     width: 432px;
-    height: fit-content;
+    right:0%;
+    top: 30%;
+    bottom: auto;
     overflow: initial;
+    padding: 25px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #modal-message-container {
@@ -350,6 +356,17 @@
     z-index: 100;
 }
 
+#afk {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 9px;
+    opacity: 0.8;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+
 #controls-container svg {
     border-radius: 29px;
     background: #eeeeee;
@@ -480,4 +497,99 @@
 
 #construction-rule-container {
     min-width: 300px;
+}
+
+#trade-leftp-name, #trade-rightp-name, .tradecell{
+    text-align: center;
+}
+
+#trade input[type=button]{
+    border: none;
+    border-radius: 15px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    height: 2em;
+    text-align: center;
+    
+}
+.trade-cell{
+    text-align: center;
+    
+}
+#trade-rightp-money{
+    padding:8px 10px;
+    border-radius: 25px;
+}
+#trade-leftp-money{
+    padding:8px 10px;
+    border-radius: 25px;
+}
+
+/*#trade input[type=number]{
+    margin-right: 2em;
+}*/
+
+#proposetradebutton, #accepttradebutton{
+    background-color: #4CAF50;
+}
+
+#canceltradebutton, #rejecttradebutton{
+    background-color: #ca322d;
+}
+
+/* tile info CSS */
+.modal-popup {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    opacity: 1;
+    z-index: 101;
+    visibility: hidden;
+}
+
+.modal-popup-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #51565C;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+    color: white
+}
+
+.place-image-wrapper{
+    width: 100%;
+    display: flex;
+
+}
+
+.place-image-wrapper img{
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    
+    
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
 }
